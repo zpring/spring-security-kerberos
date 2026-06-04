@@ -47,6 +47,7 @@ public class SpringRepositoryPlugin implements Plugin<Project> {
 			project.getRepositories().mavenLocal();
 		}
 		project.getRepositories().mavenCentral();
+		new ReleaseTrainRepositoryPlugin().apply(project);
 		if (isSnapshot) {
 			repository(project, "artifactory-snapshot", "https://repo.spring.io/snapshot/");
 		}

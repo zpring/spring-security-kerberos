@@ -20,6 +20,7 @@ import org.gradle.api.Project;
 import org.gradle.api.plugins.JavaPlugin;
 import org.gradle.api.plugins.PluginManager;
 import org.springframework.gradle.management.SpringManagementConfigurationPlugin;
+import org.springframework.gradle.maven.ReleaseTrainRepositoryPlugin;
 
 /**
  * @author Janne Valkealahti
@@ -32,5 +33,6 @@ class SamplePlugin implements Plugin<Project> {
 		pluginManager.apply(JavaPlugin.class);
 		pluginManager.apply(SpringManagementConfigurationPlugin.class);
 		new JavaConventions().apply(project);
+		new ReleaseTrainRepositoryPlugin().apply(project);
 	}
 }
